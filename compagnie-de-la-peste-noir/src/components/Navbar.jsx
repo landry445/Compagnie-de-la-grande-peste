@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import menu from "../assets/images/menu-burger.png";
 import "../style/Navbar.css";
+import Info1 from "./Infopub/Info1";
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -37,6 +38,7 @@ function Navbar() {
   return (
     <nav>
       <Outlet />
+      <Info1 />
       <div className="bar-navigation">
         <img
           src={menu}

@@ -1,18 +1,10 @@
 
+function App () {
+    
 
-import './App.css'
+    return <div>
 
-function App() {
-  
-
-  return (
-    <>
-      <div>
-       je suis dans fusion
-      </div>
-      
-    </>
-  )
+    </div>
 }
 
-export default App
+export default App;

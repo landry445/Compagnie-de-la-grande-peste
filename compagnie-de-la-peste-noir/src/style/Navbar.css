@@ -40,6 +40,11 @@
     .mon-espace-nav{
         display: flex;
     }
+    button{
+        border: 3px black solid;
+        border-radius: 10px;
+    }
+    
   }
   
   .modal-content {

@@ -30,23 +30,22 @@ h1 {
   }
   
   .title-image {
+    transition: transform 0.5s ease-in-out; /* Transition for scaling and rotating effect */
+  }
+  
+  .enveloppe-imperiale {
     width: 150px;
     height: auto;
     margin-left: 20px;
     margin-top: 20px; /* Adjust this value to move the image down */
-    transition: transform 0.5s ease-in-out; /* Transition for scaling and rotating effect */
   }
   
-  .title-image:hover {
+  .enveloppe-imperiale:hover {
     transform: scale(1.5) rotate(360deg); /* Scale and rotate effect on hover */
   }
   
   .contact-image {
     transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
-  }
-  
-  .contact-image:hover {
-    box-shadow: 0 0 20px 5px;
   }
   
   /* Neon colors for each image */
@@ -84,6 +83,52 @@ h1 {
   
   .murmure-fees:hover {
     box-shadow: 0 0 20px 5px magenta;
+  }
+  
+  /* Specific sizes for each image */
+  .pigeon-voyageur {
+    width: 120px;
+    height: auto;
+  }
+  
+  .teleportation-medievale {
+    width: 120px;
+    height: auto;
+  }
+  
+  .message-royal {
+    width: 120px;
+    height: auto;
+  }
+  
+  .message-bouteille {
+    width: 120px;
+    height: auto;
+  }
+  
+  .cor-brume {
+    width: 120px;
+    height: auto;
+  }
+  
+  .parchemin-enchante {
+    width: 120px;
+    height: auto;
+  }
+  
+  .helicoptere-bois {
+    width: 120px;
+    height: auto;
+  }
+  
+  .serviteur-fantome {
+    width: 120px;
+    height: auto;
+  }
+  
+  .murmure-fees {
+    width: 120px;
+    height: auto;
   }
   
   /* Modal styles */

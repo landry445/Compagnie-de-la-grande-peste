@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ProgressBar from './ProgressBar';
 import './form.css';
 
@@ -56,7 +56,7 @@ const Form = () => {
   const stepPercentage = (step / 5) * 100;
 
   return (
-    <div>
+    <div className="form_container_1">
       <ProgressBar percentage={stepPercentage} />
       <form onSubmit={handleSubmit}>
         {step === 1 && (

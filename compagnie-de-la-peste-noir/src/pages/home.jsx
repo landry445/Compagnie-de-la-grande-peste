@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import Form from "../components/Form"
+import Form from "../components/form"
 
 const Home = () => {
     const [data, setData] = useState(null);

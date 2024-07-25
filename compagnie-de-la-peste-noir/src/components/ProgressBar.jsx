@@ -1,5 +1,5 @@
-import React from 'react';
-import './form.css';
+import './ProgressBar.css';
+import PropTypes from 'prop-types';
 
 const ProgressBar = ({ percentage }) => {
   return (
@@ -11,6 +11,10 @@ const ProgressBar = ({ percentage }) => {
       </div>
     </div>
   );
+};
+
+ProgressBar.propTypes = {
+  percentage: PropTypes.number.isRequired
 };
 
 export default ProgressBar;

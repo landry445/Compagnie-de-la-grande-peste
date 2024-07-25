@@ -33,18 +33,131 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    img{
-        height: 60px;
+  
+    .hover-text{
+        position: absolute;
+  top: -55px;
+    left: 50%;
+  transform: translateX(-50%);
     }
 
-    .mon-espace-nav{
+    .container-buttons-left{
         display: flex;
-    }
-    button{
-        border: 3px black solid;
+        gap: 5rem;
+        margin-right: 5%;
+    .mon-espace-nav-button{
+        background-image: url("../assets/images/monespace.jpeg");
+        background-size: cover;
+        width: 100px;
+        height: 100px;
+        border: 3px white solid;
         border-radius: 10px;
+        cursor: pointer;
+        transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+p{
+    display: none;
+    text-align: center;
+    color: white;
+    background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+        background-size: cover;
+        color: transparent;
+        text-transform: uppercase;
+        font-size: 1rem;
+       
+}
     }
-    
+    .home-button{
+        background-image: url("../assets/images/Home.jpeg");
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    border: 3px white solid;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    p{
+        display: none;
+        text-align: center;
+        color: white;
+        background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+        background-size: cover;
+        color: transparent;
+        text-transform: uppercase;
+        
+    }
+    }
+    .home-button:hover{
+        box-shadow: 0 0 20px 5px rgb(2, 2, 43);
+        transform: scale(1.2);
+        p{
+            display: block;
+           }
+    }
+    .mon-espace-nav-button:hover{
+        box-shadow: 0 0 20px 5px rgb(2, 2, 43);
+        transform: scale(1.2);
+        p{
+        display: block;}
+    }
+   }
+    }
+    .container-buttons-right{
+        display: flex;
+        gap: 5rem;
+        margin-left: 5%;
+        .mon-payment-button{
+            background-image: url("../assets/images/goldcoin.jpeg");
+        background-size: cover;
+        width: 100px;
+        height: 100px;
+        border: 3px white solid;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+        p{
+            display: none;
+            text-align: center;
+            color: white;
+            background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+            background-size: cover;
+            color: transparent;
+            text-transform: uppercase;
+           
+        }
+        }
+        
+        .contact-button-nav{
+            background-image: url("../assets/images/Contact.jpeg");
+            background-size: cover;
+                width: 100px;
+                height: 100px;
+                border: 3px white solid;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+                p{
+                    display: none;
+                    text-align: center;
+                    color: white;
+                    background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+  background-size: cover;
+  color: transparent;
+  text-transform: uppercase;
+  margin: 10px 0;
+                }
+    }
+    .mon-payment-button:hover{
+        box-shadow: 0 0 20px 5px rgb(2, 2, 43);
+        transform: scale(1.2);
+        p{
+            display: block;}
+    }
+    .contact-button-nav:hover{
+        box-shadow: 0 0 20px 5px rgb(2, 2, 43);
+        transform: scale(1.2);
+        p{
+            display: block;}
+    }
   }
   
   .modal-content {

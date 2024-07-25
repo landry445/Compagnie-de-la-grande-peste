@@ -1,0 +1,112 @@
+h1 {
+    text-align: center;
+  }
+  
+  h2 {
+    font-family: 'MedievalSharp', cursive;
+    color: #2C3E50;
+    text-align: left;
+    padding: 10px;
+    margin: 20px 0;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  li {
+    font-family: 'MedievalSharp', cursive;
+    color: #2C3E50;
+  }
+  
+  .title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .title-container h1 {
+    margin-right: 20px;
+  }
+  
+  .title-image {
+    width: 150px;
+    height: auto;
+    margin-left: 20px;
+    margin-top: 20px; /* Adjust this value to move the image down */
+    transition: transform 0.5s ease-in-out; /* Transition for scaling and rotating effect */
+  }
+  
+  .title-image:hover {
+    transform: scale(1.5) rotate(360deg); /* Scale and rotate effect on hover */
+  }
+  
+  .contact-image {
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .contact-image:hover {
+    box-shadow: 0 0 20px 5px;
+  }
+  
+  /* Neon colors for each image */
+  .pigeon-voyageur:hover {
+    box-shadow: 0 0 20px 5px red;
+  }
+  
+  .teleportation-medievale:hover {
+    box-shadow: 0 0 20px 5px blue;
+  }
+  
+  .message-royal:hover {
+    box-shadow: 0 0 20px 5px green;
+  }
+  
+  .message-bouteille:hover {
+    box-shadow: 0 0 20px 5px yellow;
+  }
+  
+  .cor-brume:hover {
+    box-shadow: 0 0 20px 5px purple;
+  }
+  
+  .parchemin-enchante:hover {
+    box-shadow: 0 0 20px 5px orange;
+  }
+  
+  .helicoptere-bois:hover {
+    box-shadow: 0 0 20px 5px pink;
+  }
+  
+  .serviteur-fantome:hover {
+    box-shadow: 0 0 20px 5px cyan;
+  }
+  
+  .murmure-fees:hover {
+    box-shadow: 0 0 20px 5px magenta;
+  }
+  
+  /* Modal styles */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .modal-content img {
+    max-width: 90vw;
+    max-height: 90vh;
+  }
+  

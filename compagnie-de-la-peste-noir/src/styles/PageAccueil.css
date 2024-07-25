@@ -1,3 +1,18 @@
+.page-accueil {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
 @keyframes ripple {
     0% {
         transform: scale(1);
@@ -13,21 +28,6 @@
         transform: scale(1);
         opacity: 0.6;
     }
-}
-
-.page-accueil {
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    scroll-snap-type: y mandatory;
-}
-
-.section {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    scroll-snap-align: start;
 }
 
 .section1 {
@@ -94,7 +94,7 @@
         justify-content: center;
         align-items: center;
         width: 45vw;
-        height: 300px;
+        height: 360px;
         background-color: rgba(255, 255, 255, 0.5);
         border: 3px solid #000000;
         border-radius: 20px 0 0 20px;
@@ -109,11 +109,12 @@
         height: 100%;
         margin-right: -6vw;
         font-family: 'MedievalSharp';
+        transition: opacity 0.3s ease;
     }
 
     .buttons button {
         width: 40vw;
-        padding: 10px;
+        padding: 5px;
         font-size: 1.2rem;
         cursor: pointer;
         border: 3px solid #000000;
@@ -125,22 +126,14 @@
     }
 
     .buttons button:hover {
-        background-color: #154579;
+        background-color: #000000;
     }
-}
 
-.section3 {
-    background-color: #f0f0f0;
-
-    .carousel {
-        width: 80%;
-        height: 80%;
-        background: white;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .note {
+        font-size: 0.9rem;
+        color: gray;
+        margin: 0;
+        text-align: center;
     }
 }
 
@@ -164,4 +157,27 @@
 .buttons-container.animate {
     opacity: 1;
     transform: translateX(0);
+}
+
+.section3 {
+    background-image: url('../assets/home3.png');
+    width: 100vw;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+
+
+    .carousel {
+
+        overflow: hidden;
+        height: 90%;
+        width: 100%;
+
+    }
+
+    .carousel img {
+        width: 60%;
+        height: auto;
+        object-fit: cover;
+    }
 }

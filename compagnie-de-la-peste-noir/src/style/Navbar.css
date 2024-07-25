@@ -1,0 +1,66 @@
+
+.bar-navigation{
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    justify-content: flex-end;
+    width: 100%;
+   
+    img{
+        height: 40px;
+    }
+}
+.contact-bar-navigation{
+    display: flex;
+ 
+   
+}
+  
+.burger-menu{
+    margin-right: 5%;
+    cursor: pointer;
+}
+
+.top-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    img{
+        height: 60px;
+    }
+
+    .mon-espace-nav{
+        display: flex;
+    }
+  }
+  
+  .modal-content {
+    background-image: url("../assets/images/fondmenu.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 90%;
+    height: 100%;
+    max-width: 600px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+   
+  }
+  
+  .close-button {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  

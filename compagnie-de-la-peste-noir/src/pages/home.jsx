@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import Form from "../components/Form"
 
 const Home = () => {
     const [data, setData] = useState(null);
@@ -27,18 +28,7 @@ const Home = () => {
 
     return (
         <div>
-            <h1>Diseases</h1>
-            <ul>
-                {data.map((disease, index) => (
-                    <li key={index}>
-                        <h3>{disease.name}</h3>
-                        <p>{disease.description}</p>
-                        <p>Healer: {disease.healer_type}</p>
-                        <p>Price: {disease.price}</p>
-                        <p>Survival Chance: {disease.survival_chance}</p>
-                    </li>
-                ))}
-            </ul>
+            <Form />
         </div>
     );
 };

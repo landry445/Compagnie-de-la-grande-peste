@@ -87,7 +87,7 @@ h1 {
   
   /* Specific sizes for each image */
   .pigeon-voyageur {
-    width: 120px;
+    width: 120px !important;
     height: auto;
   }
   
@@ -145,7 +145,7 @@ h1 {
   }
   
   .modal-content {
-    background-color: white;
+    
     padding: 20px;
     border-radius: 10px;
   }

@@ -20,11 +20,12 @@ import corBrumeAudio from '../sons/battle_horn_1-6931.mp3';
 import parcheminEnchanteAudio from '../sons/newspaper-foley-4-196721.mp3';
 import helicoptereBoisAudio from '../sons/helicopter-sound-41975.mp3';
 import serviteurFantomeAudio from '../sons/poltergeist-horror-sound-9-vol-001-149858.mp3';
-import murmureFeesAudio from '../sons/butterfly-wings-fluttering-2-28738.mp3';
+import murmureFeesAudio from '../sons/the-sound-of-nature-123109.mp3';
 import enveloppeImperialeAudio from '../sons/papercrackle3-36110.mp3';
 
 const Contact = () => {
   const [modalImage, setModalImage] = useState(null);
+  const [currentAudio, setCurrentAudio] = useState(null);
   const audioRefs = {
     pigeonVoyageur: useRef(null),
     teleportationMedievale: useRef(null),
@@ -40,8 +41,13 @@ const Contact = () => {
 
   const handleImageClick = (imageSrc, audioRef) => {
     setModalImage(imageSrc);
+    if (currentAudio && currentAudio !== audioRef.current) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
     if (audioRef.current) {
       audioRef.current.play();
+      setCurrentAudio(audioRef.current);
     }
   };
 
@@ -60,6 +66,11 @@ const Contact = () => {
 
   const handleCloseModal = () => {
     setModalImage(null);
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+      setCurrentAudio(null);
+    }
   };
 
   return (
@@ -77,7 +88,7 @@ const Contact = () => {
       </div>
       
       <div className="contact-method">
-        <h2>1. Envoyez-nous un pigeon voyageur</h2>
+        <h2>Envoyez-nous un pigeon voyageur</h2>
         <img 
           src={pigeonVoyageur} 
           alt="Pigeon Voyageur" 
@@ -91,7 +102,7 @@ const Contact = () => {
       </div>
 
       <div className="contact-method">
-        <h2>2. Téléportation Médiévale</h2>
+        <h2>Téléportation Médiévale</h2>
         <img 
           src={teleportationMedievale} 
           alt="Téléportation Médiévale" 
@@ -105,7 +116,7 @@ const Contact = () => {
       </div>
 
       <div className="contact-method">
-        <h2>3. Message Royal</h2>
+        <h2>Message Royal</h2>
         <img 
           src={messageRoyal} 
           alt="Message Royal" 
@@ -119,7 +130,7 @@ const Contact = () => {
       </div>
 
       <div className="contact-method">
-        <h2>4. Message dans une Bouteille</h2>
+        <h2>Message dans une Bouteille</h2>
         <img 
           src={messageBouteille} 
           alt="Message dans une Bouteille" 
@@ -133,7 +144,7 @@ const Contact = () => {
       </div>
 
       <div className="contact-method">
-        <h2>5. Cor de Brume</h2>
+        <h2>Cor de Brume</h2>
         <img 
           src={corBrume} 
           alt="Cor de Brume" 
@@ -147,7 +158,7 @@ const Contact = () => {
       </div>
 
       <div className="contact-method">
-        <h2>6. Parchemin Enchanté</h2>
+        <h2>Parchemin Enchanté</h2>
         <img 
           src={parcheminEnchante} 
           alt="Parchemin Enchanté" 
@@ -161,7 +172,7 @@ const Contact = () => {
       </div>
 
       <div className="contact-method">
-        <h2>7. Hélicoptère en Bois</h2>
+        <h2>Hélicoptère en Bois</h2>
         <img 
           src={helicoptereBois} 
           alt="Hélicoptère en Bois" 
@@ -175,7 +186,7 @@ const Contact = () => {
       </div>
 
       <div className="contact-method">
-        <h2>8. Serviteur Fantôme</h2>
+        <h2>Serviteur Fantôme</h2>
         <img 
           src={serviteurFantome} 
           alt="Serviteur Fantôme" 
@@ -189,7 +200,7 @@ const Contact = () => {
       </div>
 
       <div className="contact-method">
-        <h2>9. Murmure aux Fées</h2>
+        <h2>Murmure aux Fées</h2>
         <img 
           src={murmureFees} 
           alt="Murmure aux Fées" 

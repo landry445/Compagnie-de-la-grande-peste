@@ -87,130 +87,124 @@ const Contact = () => {
         <audio ref={audioRefs.enveloppeImperiale} src={enveloppeImperialeAudio}></audio>
       </div>
       
-      <div className="contact-method">
-        <h2>Envoyez-nous un pigeon voyageur</h2>
-        <img 
-          src={pigeonVoyageur} 
-          alt="Pigeon Voyageur" 
-          className="contact-image pigeon-voyageur" 
-          onClick={() => handleImageClick(pigeonVoyageur, audioRefs.pigeonVoyageur)} 
-        />
-        <audio ref={audioRefs.pigeonVoyageur} src={pigeonVoyageurAudio}></audio>
-        <ul>
-          <li>Utilisez un pigeon bien entraîné et fiable, de préférence avec une petite armure pour le protéger des faucons.</li>
-        </ul>
-      </div>
-
-      <div className="contact-method">
-        <h2>Téléportation Médiévale</h2>
-        <img 
-          src={teleportationMedievale} 
-          alt="Téléportation Médiévale" 
-          className="contact-image teleportation-medievale" 
-          onClick={() => handleImageClick(teleportationMedievale, audioRefs.teleportationMedievale)} 
-        />
-        <audio ref={audioRefs.teleportationMedievale} src={teleportationMedievaleAudio}></audio>
-        <ul>
-          <li>Rendez-vous à votre cercle de pierres le plus proche et récitez l&apos;incantation magique pour nous téléporter votre message.</li>
-        </ul>
-      </div>
-
-      <div className="contact-method">
-        <h2>Message Royal</h2>
-        <img 
-          src={messageRoyal} 
-          alt="Message Royal" 
-          className="contact-image message-royal" 
-          onClick={() => handleImageClick(messageRoyal, audioRefs.messageRoyal)} 
-        />
-        <audio ref={audioRefs.messageRoyal} src={messageRoyalAudio}></audio>
-        <ul>
-          <li>Engagez un messager royal portant un uniforme médiéval pour livrer votre message avec une révérence.</li>
-        </ul>
-      </div>
-
-      <div className="contact-method">
-        <h2>Message dans une Bouteille</h2>
-        <img 
-          src={messageBouteille} 
-          alt="Message dans une Bouteille" 
-          className="contact-image message-bouteille" 
-          onClick={() => handleImageClick(messageBouteille, audioRefs.messageBouteille)} 
-        />
-        <audio ref={audioRefs.messageBouteille} src={messageBouteilleAudio}></audio>
-        <ul>
-          <li>Lancez une bouteille contenant votre message dans la rivière la plus proche et espérez qu&apos;elle atteigne notre château.</li>
-        </ul>
-      </div>
-
-      <div className="contact-method">
-        <h2>Cor de Brume</h2>
-        <img 
-          src={corBrume} 
-          alt="Cor de Brume" 
-          className="contact-image cor-brume" 
-          onClick={() => handleImageClick(corBrume, audioRefs.corBrume)} 
-        />
-        <audio ref={audioRefs.corBrume} src={corBrumeAudio}></audio>
-        <ul>
-          <li>Soufflez dans un cor de brume magique trois fois depuis le sommet de la colline la plus haute, et votre message sera entendu.</li>
-        </ul>
-      </div>
-
-      <div className="contact-method">
-        <h2>Parchemin Enchanté</h2>
-        <img 
-          src={parcheminEnchante} 
-          alt="Parchemin Enchanté" 
-          className="contact-image parchemin-enchante" 
-          onClick={() => handleImageClick(parcheminEnchante, audioRefs.parcheminEnchante)} 
-        />
-        <audio ref={audioRefs.parcheminEnchante} src={parcheminEnchanteAudio}></audio>
-        <ul>
-          <li>Écrivez votre message sur un parchemin enchanté et brûlez-le dans un feu sacré pour qu&apos;il apparaisse dans notre cheminée.</li>
-        </ul>
-      </div>
-
-      <div className="contact-method">
-        <h2>Hélicoptère en Bois</h2>
-        <img 
-          src={helicoptereBois} 
-          alt="Hélicoptère en Bois" 
-          className="contact-image helicoptere-bois" 
-          onClick={() => handleImageClick(helicoptereBois, audioRefs.helicoptereBois)} 
-        />
-        <audio ref={audioRefs.helicoptereBois} src={helicoptereBoisAudio}></audio>
-        <ul>
-          <li>Envoyez un hélicoptère en bois miniaturisé fabriqué par un artisan gnome pour livrer votre message directement à notre fenêtre.</li>
-        </ul>
-      </div>
-
-      <div className="contact-method">
-        <h2>Serviteur Fantôme</h2>
-        <img 
-          src={serviteurFantome} 
-          alt="Serviteur Fantôme" 
-          className="contact-image serviteur-fantome" 
-          onClick={() => handleImageClick(serviteurFantome, audioRefs.serviteurFantome)} 
-        />
-        <audio ref={audioRefs.serviteurFantome} src={serviteurFantomeAudio}></audio>
-        <ul>
-          <li>Convoquez un serviteur fantôme pour porter votre message jusqu&apos;à notre manoir spectral.</li>
-        </ul>
-      </div>
-
-      <div className="contact-method">
-        <h2>Murmure aux Fées</h2>
-        <img 
-          src={murmureFees} 
-          alt="Murmure aux Fées" 
-          className="contact-image murmure-fees" 
-          onClick={() => handleImageClick(murmureFees, audioRefs.murmureFees)} 
-        />
-        <audio ref={audioRefs.murmureFees} src={murmureFeesAudio}></audio>
-        <ul>
-          <li>Trouvez un cercle de fées dans une forêt enchantée et murmurez-leur votre message, elles nous le transmettront.</li>
-        </ul>
+      <div className="contact-grid">
+        <div className="contact-method">
+          <h2>Pigeon voyageur</h2>
+          <img 
+            src={pigeonVoyageur} 
+            alt="Pigeon Voyageur" 
+            className="contact-image pigeon-voyageur" 
+            onClick={() => handleImageClick(pigeonVoyageur, audioRefs.pigeonVoyageur)} 
+          />
+          <audio ref={audioRefs.pigeonVoyageur} src={pigeonVoyageurAudio}></audio>
+          <ul>
+            <li>Utilisez un pigeon bien entraîné et fiable, de préférence avec une petite armure pour le protéger des faucons.</li>
+          </ul>
+        </div>
+        <div className="contact-method">
+          <h2>Cercle de pierre</h2>
+          <img 
+            src={teleportationMedievale} 
+            alt="Téléportation Médiévale" 
+            className="contact-image teleportation-medievale" 
+            onClick={() => handleImageClick(teleportationMedievale, audioRefs.teleportationMedievale)} 
+          />
+          <audio ref={audioRefs.teleportationMedievale} src={teleportationMedievaleAudio}></audio>
+          <ul>
+            <li>Rendez-vous à votre cercle de pierres le plus proche et récitez l&apos;incantation magique pour nous téléporter votre message.</li>
+          </ul>
+        </div>
+        <div className="contact-method">
+          <h2>Message Royal</h2>
+          <img 
+            src={messageRoyal} 
+            alt="Message Royal" 
+            className="contact-image message-royal" 
+            onClick={() => handleImageClick(messageRoyal, audioRefs.messageRoyal)} 
+          />
+          <audio ref={audioRefs.messageRoyal} src={messageRoyalAudio}></audio>
+          <ul>
+            <li>Engagez un messager royal portant un uniforme médiéval pour livrer votre message avec une révérence.</li>
+          </ul>
+        </div>
+        <div className="contact-method">
+          <h2>Message dans une Bouteille</h2>
+          <img 
+            src={messageBouteille} 
+            alt="Message dans une Bouteille" 
+            className="contact-image message-bouteille" 
+            onClick={() => handleImageClick(messageBouteille, audioRefs.messageBouteille)} 
+          />
+          <audio ref={audioRefs.messageBouteille} src={messageBouteilleAudio}></audio>
+          <ul>
+            <li>Lancez une bouteille contenant votre message dans la rivière la plus proche et espérez qu&apos;elle atteigne notre château.</li>
+          </ul>
+        </div>
+        <div className="contact-method">
+          <h2>Cor de Brume enchantée</h2>
+          <img 
+            src={corBrume} 
+            alt="Cor de Brume" 
+            className="contact-image cor-brume" 
+            onClick={() => handleImageClick(corBrume, audioRefs.corBrume)} 
+          />
+          <audio ref={audioRefs.corBrume} src={corBrumeAudio}></audio>
+          <ul>
+            <li>Soufflez dans un cor de brume magique trois fois depuis le sommet de la colline la plus haute, et votre message sera entendu.</li>
+          </ul>
+        </div>
+        <div className="contact-method">
+          <h2>Vieux parchemin Enchanté</h2>
+          <img 
+            src={parcheminEnchante} 
+            alt="Parchemin Enchanté" 
+            className="contact-image parchemin-enchante" 
+            onClick={() => handleImageClick(parcheminEnchante, audioRefs.parcheminEnchante)} 
+          />
+          <audio ref={audioRefs.parcheminEnchante} src={parcheminEnchanteAudio}></audio>
+          <ul>
+            <li>Écrivez votre message sur un parchemin enchanté et brûlez-le dans un feu sacré pour qu&apos;il apparaisse dans notre cheminée.</li>
+          </ul>
+        </div>
+        <div className="contact-method">
+          <h2>Hélicoptère en Bois</h2>
+          <img 
+            src={helicoptereBois} 
+            alt="Hélicoptère en Bois" 
+            className="contact-image helicoptere-bois" 
+            onClick={() => handleImageClick(helicoptereBois, audioRefs.helicoptereBois)} 
+          />
+          <audio ref={audioRefs.helicoptereBois} src={helicoptereBoisAudio}></audio>
+          <ul>
+            <li>Envoyez un hélicoptère en bois miniaturisé fabriqué par un artisan gnome pour livrer votre message directement à notre fenêtre.</li>
+          </ul>
+        </div>
+        <div className="contact-method">
+          <h2>Serviteur Fantôme</h2>
+          <img 
+            src={serviteurFantome} 
+            alt="Serviteur Fantôme" 
+            className="contact-image serviteur-fantome" 
+            onClick={() => handleImageClick(serviteurFantome, audioRefs.serviteurFantome)} 
+          />
+          <audio ref={audioRefs.serviteurFantome} src={serviteurFantomeAudio}></audio>
+          <ul>
+            <li>Convoquez un serviteur fantôme pour porter votre message jusqu&apos;à notre manoir spectral.</li>
+          </ul>
+        </div>
+        <div className="contact-method">
+          <h2>Murmure aux Fées</h2>
+          <img 
+            src={murmureFees} 
+            alt="Murmure aux Fées" 
+            className="contact-image murmure-fees" 
+            onClick={() => handleImageClick(murmureFees, audioRefs.murmureFees)} 
+          />
+          <audio ref={audioRefs.murmureFees} src={murmureFeesAudio}></audio>
+          <ul>
+            <li>Trouvez un cercle de fées dans une forêt enchantée et murmurez-leur votre message, elles nous le transmettront.</li>
+          </ul>
+        </div>
       </div>
 
       {modalImage && (
@@ -225,3 +219,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

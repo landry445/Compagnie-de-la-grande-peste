@@ -1,83 +1,115 @@
-
+body {
+    background-image: url('../images/paper-1074131.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 h1 {
     text-align: center;
     z-index: 2;
     position: relative;
 }
-  
+
 h2 {
     font-family: 'MedievalSharp', cursive;
     color: #2C3E50;
-    text-align: left;
-    padding: 10px;
-    margin: 20px 0;
+    text-align: center;
+    padding: 5px;
+    margin: 10px 0;
+    z-index: 2;
+    position: relative;
+    font-size: 1.2em; /* Augmentation de la taille de la police */
+    line-height: 1.2em; /* Réduire l'espacement entre les lignes */
+    max-width: 200px; /* Limiter la largeur */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    font-family: 'MedievalSharp', cursive;
+    color: #2C3E50;
+    font-weight: bold; /* Texte en gras */
+    font-size: 1em; /* Augmentation de la taille de la police */
+    margin: 2px 0; /* Réduire l'espacement vertical entre les éléments de la liste */
+    text-align: left; /* Aligner le texte à gauche */
+    max-width: 200px; /* Limiter la largeur des éléments de liste */
+    line-height: 1.2em; /* Réduire l'espacement entre les lignes */
+}
+
+.faq-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.faq-item {
+    flex: 1 1 calc(33.333% - 40px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
     z-index: 2;
     position: relative;
 }
-  
+
 .faq-image {
-    width: 200px; /* Taille fixe pour toutes les images sauf pigeon voyageur */
+    width: 200px;
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     cursor: pointer;
-    z-index: 2;
-    position: relative;
 }
 
 .faq-main-image {
     width: 500px;
     height: auto;
     display: block;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 110px; /* Ajout d'un espace de 40px en bas de l'image principale */
     transition: transform 2s;
-    z-index: 2;
-    position: relative;
 }
 
-.faq-main-image:hover {
-    transform: rotate(360deg);
+.faq-main-image.rotated {
+    transform: rotateY(360deg);
 }
 
-.pigeon-voyageur {
-    width: 200px !important; /* Taille spécifique pour pigeon voyageur */
-    height: auto !important;
-    z-index: 2;
-    position: relative;
+.peste-noire:hover {
+    box-shadow: 0 0 20px 5px purple;
+}
+
+.saignee:hover {
+    box-shadow: 0 0 20px 5px green;
+}
+
+.potion-magique:hover {
+    box-shadow: 0 0 20px 5px pink;
+}
+
+.remede-dragon:hover {
+    box-shadow: 0 0 20px 5px orange;
+}
+
+.remede-demon:hover {
+    box-shadow: 0 0 20px 5px yellow;
+}
+
+.potion-amour:hover {
+    box-shadow: 0 0 20px 5px red;
+}
+
+.potion-cheval:hover {
+    box-shadow: 0 0 20px 5px violet;
 }
 
 .pigeon-voyageur:hover {
     box-shadow: 0 0 20px 5px blue;
 }
-  
-.saignee:hover {
-    box-shadow: 0 0 20px 5px green;
-}
-  
-.peste-noire:hover {
-    box-shadow: 0 0 20px 5px purple;
-}
-  
-.potion-magique:hover {
-    box-shadow: 0 0 20px 5px pink;
-}
-  
-.remede-dragon:hover {
-    box-shadow: 0 0 20px 5px orange;
-}
-  
-.remede-demon:hover {
-    box-shadow: 0 0 20px 5px yellow;
-}
-  
-.potion-amour:hover {
-    box-shadow: 0 0 20px 5px red;
-}
-  
-.potion-cheval:hover {
-    box-shadow: 0 0 20px 5px violet;
-}
-  
+
 .fullscreen-overlay {
     position: fixed;
     top: 0;

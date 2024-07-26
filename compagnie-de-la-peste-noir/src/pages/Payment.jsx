@@ -49,7 +49,7 @@ function Payment() {
           </p>
         </div>
         <div>
-          <p>Je me fais consigner</p>
+          <button>Je me fais consigner</button>
         </div>
       </div>
     </>

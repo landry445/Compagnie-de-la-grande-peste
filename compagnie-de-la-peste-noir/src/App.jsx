@@ -1,16 +1,15 @@
-import './App.css'
-
+import Carousel from './components/Carousel.jsx';
+// import Card from './components/Card.jsx';
 
 function App() {
-
   return (
     <>
-      <div>
-       
-      </div>
-      
-    </>
-  )
+  
+    <div>
+      <Carousel />
+    </div>
+  </>  
+  );
 }
 
-export default App
+export default App;

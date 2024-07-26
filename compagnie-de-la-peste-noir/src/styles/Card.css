@@ -1,0 +1,57 @@
+.coupon {
+    border: 5px solid black; /* Dotted border */
+    /* width: 100%;
+    height: 100%; */
+    border-radius: 15px; /* Rounded border */
+    margin: 0 auto; /* Center the coupon */
+    max-width: 600px;
+    background: #67236c;
+    color: white;
+
+    .coupon-container{
+      img{
+        width: 100%;
+      }
+    }
+  .container {
+    padding: 2px 16px;
+    /* background-color: #f1f1f1; */
+  }
+  
+  .promo {
+    
+    padding: 3px;
+  }
+  
+  .expire {
+    
+  }
+
+  .container-button{
+    display: flex;
+    justify-content: center;
+  }
+    .medieval-button {
+      padding: 10px 20px;
+      background-color: #795649; /* A dark wood-like brown */
+      color: #f4e5c3; /* A parchment-like off-white */
+      border: 2px solid #c0a080; /* A lighter brown border */
+      font-family: 'Goudy Bookletter 1911', serif; /* A font with an old-style feel */
+      font-size: 18px;
+      text-shadow: 1px 1px 0px #a67c52; /* Gives a bit of depth to the text */
+      box-shadow: 2px 2px 0px #a67c52; /* Simulates an inset look */
+      border-radius: 4px; /* Slightly rounded corners */
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .medieval-button:hover {
+      background-color: #8a6e2f; /* A lighter, worn wood color for hover */
+      box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3); /* A more pronounced shadow for hover */
+    }
+    
+    .medieval-button:active {
+      box-shadow: inset 1px 1px 2px 0px rgba(0, 0, 0, 0.5); /* An inset shadow for a pressed effect */
+      transform: translateY(2px); /* Moves the button down to simulate a press */
+    }
+  }

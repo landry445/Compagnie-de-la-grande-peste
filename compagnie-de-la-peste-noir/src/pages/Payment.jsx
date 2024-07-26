@@ -1,7 +1,10 @@
 import "../styles/Payment.css";
 import logoPest from "../assets/logoPeste.png";
+import { useState } from "react";
 
 function Payment() {
+  const [reste, setReste] = useState(300);
+
   return (
     <div className="pagePayment">
       <header>
@@ -62,15 +65,41 @@ function Payment() {
             </div>
             <div className="reglDevise">
               <p>En écus dor</p>
+              <div>
+                <input
+                  type="number"
+                  placeholder="montant"
+                  onBlur={(event) => {
+                    console.log(event.target.value);
+                    if (event.target.value === "") {
+                      setReste(300);
+                    }
+                    setReste((prevState) => prevState - event.target.value);
+                  }}
+                />
+              </div>
             </div>
             <div className="reglCochon">
               <p>En cochon de bonne santé</p>
+              <div>
+                <input
+                  type="number"
+                  placeholder="montant"
+                  onBlur={(event) => {
+                    console.log(event.target.value);
+                    if (event.target.value === "") {
+                      setReste(300);
+                    }
+                    setReste(
+                      (prevState) => prevState - event.target.value * 50
+                    );
+                  }}
+                />
+              </div>
             </div>
           </div>
           <p>Montant restant :</p>
-          <div className="reste"></div>
-          <div className="montantEcus"></div>
-          <div className="montantCochon"></div>
+          <div className="reste">{reste}</div>
         </div>
       </div>
       <div className="footer">
@@ -82,8 +111,8 @@ function Payment() {
             point
           </p>
         </div>
-        <div>
-          <p>Je me fais consigner</p>
+        <div className="consigner">
+          <input type="button">Je me fais consigner</input>
         </div>
       </div>
     </div>

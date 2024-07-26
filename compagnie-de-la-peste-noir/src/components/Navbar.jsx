@@ -4,6 +4,7 @@ import menu from "../assets/images/menu-burger.png";
 import "../style/Navbar.css";
 import Info1 from "./Infopub/Info1";
 import Info2 from "./Infopub/Info2";
+import Info3 from "./Infopub/Info3";
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -41,6 +42,7 @@ function Navbar() {
       <Outlet />
       <Info1 />
       <Info2 />
+      <Info3 />
       <div className="bar-navigation">
         <img
           src={menu}

@@ -2,23 +2,23 @@ import { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import "./InfoPopup.css";
-import toomuch from "./imageinfo/manykids.jpeg";
-import condom from "./imageinfo/capote.png";
+import diamand from "./imageinfo/poudre.jpeg";
+import knight from "./imageinfo/bellypain.jpeg";
 
-function Info2() {
+function Info3() {
   const [isVisible, setIsVisible] = useState(false);
-  const kids = useRef();
+  const powder = useRef();
   const tl = useRef();
   const [pubContent, setPubContent] = useState(0);
 
   const pubArray = [
     {
-      text: "Utilisez Chevrex ! Le préservatifs en peau de vessie de chévre, car la douceur est un plus.",
-      image: condom,
+      text: "Constipé? Mal au ventre ? En armure c'est compliqué.",
+      image: knight,
     },
     {
-      text: "Trop d'enfants? Savez vous qu'il y a une solution?",
-      image: toomuch,
+      text: "N'attendez plus! Diamantix, la poudre de diamant qui vous nettoie les entrailles. Effect secondaire : peut entraîner la mort",
+      image: diamand,
     },
   ];
 
@@ -29,7 +29,7 @@ function Info2() {
 
     const contentInterval = setInterval(() => {
       setPubContent((prevContent) => (prevContent + 1) % pubArray.length);
-    }, 4000); // 30 seconds
+    }, 4500); // 30 seconds
 
     return () => {
       console.log("Cleanup");
@@ -42,22 +42,22 @@ function Info2() {
     if (isVisible) {
       tl.current = gsap
         .timeline()
-        .to(".info-container2", {
-          x: 400,
+        .to(".info-container3", {
+          y: 300,
           duration: 10,
           delay: 0.5,
         })
-        .to(".info-container2", {
-          x: -300,
+        .to(".info-container3", {
+          y: -500,
         });
     }
   }, [isVisible]);
 
   return (
-    <div ref={kids}>
+    <div ref={powder}>
       <div
         className={
-          isVisible ? "info-container2 visible" : "info-container2 hidden"
+          isVisible ? "info-container3 visible" : "info-container3 hidden"
         }
       >
         <h2>Info Pub</h2>
@@ -68,4 +68,4 @@ function Info2() {
   );
 }
 
-export default Info2;
+export default Info3;

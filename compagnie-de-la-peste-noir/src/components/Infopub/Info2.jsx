@@ -19,7 +19,7 @@ function Info2() {
       image: condom,
     },
     {
-      text: "Trop d'enfants? Savez vous qu'il y a une solution?",
+      text: "Trop d'enfants? Savez vous qu'il y avait une solution?",
       image: toomuch,
     },
   ];

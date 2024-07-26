@@ -113,13 +113,15 @@ const PageAccueil = () => {
                             )}
                             {display === 'additionalButtons' && (
                                 <>
+                                    <div className="label-input-container"></div>
                                     <label>
                                         Nom de registre:<br />
                                         <input type="text" />
                                     </label>
+                                    <div className="label-input-container"></div>
                                     <label>
                                         Parole d'entrée:<br />
-                                        <input type="password" />
+                                        <input type="text" />
                                     </label>
                                     <button onClick={handleSubmit}>Soumettre</button>
                                     <button onClick={handleResetClick}>Retour</button>
@@ -127,22 +129,27 @@ const PageAccueil = () => {
                             )}
                             {display === 'inputs' && (
                                 <>
+                                    <div className="label-input-container"></div>
                                     <label>
                                         Nom de registre:
                                         <input type="text" />
                                     </label>
+                                    <div className="label-input-container"></div>
                                     <label>
                                         Nom et prenom:
                                         <input type="text" />
                                     </label>
+                                    <div className="label-input-container"></div>
                                     <label>
                                         Votre logis:
                                         <input type="text" />
                                     </label>
+                                    <div className="label-input-container"></div>
                                     <label>
                                         Votre Hameau:
                                         <input type="text" />
                                     </label>
+                                    <div className="label-input-container"></div>
                                     <label>
                                         Rang social*:
                                         <input type="text" />
@@ -171,6 +178,7 @@ const PageAccueil = () => {
                         <div>
                             <img src={slide3} alt="slide3" />
                         </div>
+
                     </Slider>
                 </div>
             </section>

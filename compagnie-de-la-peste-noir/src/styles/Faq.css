@@ -1,0 +1,102 @@
+
+
+h1 {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+  
+h2 {
+    font-family: 'MedievalSharp', cursive;
+    color: #2C3E50;
+    text-align: left;
+    padding: 10px;
+    margin: 20px 0;
+    z-index: 2;
+    position: relative;
+}
+  
+.faq-image {
+    width: 200px; /* Taille fixe pour toutes les images sauf pigeon voyageur */
+    height: auto;
+    margin-bottom: 20px;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+}
+
+.faq-main-image {
+    width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+    transition: transform 2s;
+    z-index: 2;
+    position: relative;
+}
+
+.faq-main-image:hover {
+    transform: rotate(360deg);
+}
+
+.pigeon-voyageur {
+    width: 200px !important; /* Taille spécifique pour pigeon voyageur */
+    height: auto !important;
+    z-index: 2;
+    position: relative;
+}
+
+.pigeon-voyageur:hover {
+    box-shadow: 0 0 20px 5px blue;
+}
+  
+.saignee:hover {
+    box-shadow: 0 0 20px 5px green;
+}
+  
+.peste-noire:hover {
+    box-shadow: 0 0 20px 5px purple;
+}
+  
+.potion-magique:hover {
+    box-shadow: 0 0 20px 5px pink;
+}
+  
+.remede-dragon:hover {
+    box-shadow: 0 0 20px 5px orange;
+}
+  
+.remede-demon:hover {
+    box-shadow: 0 0 20px 5px yellow;
+}
+  
+.potion-amour:hover {
+    box-shadow: 0 0 20px 5px red;
+}
+  
+.potion-cheval:hover {
+    box-shadow: 0 0 20px 5px violet;
+}
+  
+.fullscreen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.fullscreen-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.fullscreen-image {
+    max-width: 90%;
+    max-height: 90%;
+}

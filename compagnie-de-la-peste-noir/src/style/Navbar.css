@@ -63,6 +63,8 @@ p{
         color: transparent;
         text-transform: uppercase;
         font-size: 1rem;
+        -moz-background-clip: text;
+        -webkit-background-clip: text;
        
 }
     }
@@ -83,6 +85,8 @@ p{
         background-size: cover;
         color: transparent;
         text-transform: uppercase;
+        -moz-background-clip: text;
+        -webkit-background-clip: text;
         
     }
     }
@@ -122,6 +126,8 @@ p{
             background-size: cover;
             color: transparent;
             text-transform: uppercase;
+            -moz-background-clip: text;
+            -webkit-background-clip: text;
            
         }
         }
@@ -144,6 +150,8 @@ p{
   color: transparent;
   text-transform: uppercase;
   margin: 10px 0;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
                 }
     }
     .mon-payment-button:hover{

@@ -1,0 +1,184 @@
+
+.bar-navigation{
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    justify-content: flex-end;
+    width: 100%;
+   
+    img{
+        height: 40px;
+    }
+}
+.contact-bar-navigation{
+    display: flex;
+ 
+   
+}
+  
+.burger-menu{
+    margin-right: 5%;
+    cursor: pointer;
+}
+
+.top-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  
+    .hover-text{
+        position: absolute;
+  top: -55px;
+    left: 50%;
+  transform: translateX(-50%);
+    }
+
+    .container-buttons-left{
+        display: flex;
+        gap: 5rem;
+        margin-right: 5%;
+    .mon-espace-nav-button{
+        background-image: url("../assets/images/monespace.jpeg");
+        background-size: cover;
+        width: 100px;
+        height: 100px;
+        border: 3px white solid;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+p{
+    display: none;
+    text-align: center;
+    color: white;
+    background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+        background-size: cover;
+        color: transparent;
+        text-transform: uppercase;
+        font-size: 1rem;
+       
+}
+    }
+    .home-button{
+        background-image: url("../assets/images/Home.jpeg");
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    border: 3px white solid;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    p{
+        display: none;
+        text-align: center;
+        color: white;
+        background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+        background-size: cover;
+        color: transparent;
+        text-transform: uppercase;
+        
+    }
+    }
+    .home-button:hover{
+        box-shadow: 0 0 20px 5px rgb(2, 2, 43);
+        transform: scale(1.2);
+        p{
+            display: block;
+           }
+    }
+    .mon-espace-nav-button:hover{
+        box-shadow: 0 0 20px 5px rgb(2, 2, 43);
+        transform: scale(1.2);
+        p{
+        display: block;}
+    }
+   }
+    }
+    .container-buttons-right{
+        display: flex;
+        gap: 5rem;
+        margin-left: 5%;
+        .mon-payment-button{
+            background-image: url("../assets/images/goldcoin.jpeg");
+        background-size: cover;
+        width: 100px;
+        height: 100px;
+        border: 3px white solid;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+        p{
+            display: none;
+            text-align: center;
+            color: white;
+            background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+            background-size: cover;
+            color: transparent;
+            text-transform: uppercase;
+           
+        }
+        }
+        
+        .contact-button-nav{
+            background-image: url("../assets/images/Contact.jpeg");
+            background-size: cover;
+                width: 100px;
+                height: 100px;
+                border: 3px white solid;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+                p{
+                    display: none;
+                    text-align: center;
+                    color: white;
+                    background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+  background-size: cover;
+  color: transparent;
+  text-transform: uppercase;
+  margin: 10px 0;
+                }
+    }
+    .mon-payment-button:hover{
+        box-shadow: 0 0 20px 5px rgb(2, 2, 43);
+        transform: scale(1.2);
+        p{
+            display: block;}
+    }
+    .contact-button-nav:hover{
+        box-shadow: 0 0 20px 5px rgb(2, 2, 43);
+        transform: scale(1.2);
+        p{
+            display: block;}
+    }
+  }
+  
+  .modal-content {
+    background-image: url("../assets/images/fondmenu.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 90%;
+    height: 100%;
+    max-width: 600px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+   
+  }
+  
+  .close-button {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  

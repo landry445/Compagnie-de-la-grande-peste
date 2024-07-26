@@ -1,0 +1,195 @@
+.page-accueil {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+}
+
+.section1 {
+    position: relative;
+    overflow: hidden;
+    background-image: url('../assets/blue-purple-backround.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.section1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: inherit;
+    background-position: inherit;
+    filter: blur(3px);
+    opacity: 0.6;
+    animation: ripple 3s infinite;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.slogan {
+    font-size: 4.5vw;
+    color: whitesmoke;
+    animation: zoomIn 5s ease-in-out;
+    z-index: 10;
+}
+
+.section2 {
+    background-image: url('../assets/home1.png');
+    background-size: cover;
+    background-position: center;
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 50vw;
+    }
+
+    .buttons-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45vw;
+        height: 420px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border: 3px solid #000000;
+        border-radius: 20px 0 0 20px;
+        margin-right: -3px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-content: start;
+        font-size: 0.8rem;
+        margin-right: -6vw;
+        font-family: 'MedievalSharp';
+        transition: opacity 0.3s ease;
+        line-height: 0.8rem;
+
+        .label-input-container {
+            margin-top: -10px;
+            margin-bottom: -18px;
+
+        }
+    }
+
+    .buttons button {
+        width: 40vw;
+        padding: 5px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        border: 2px solid #000000;
+        border-radius: 5px 0 0 5px;
+        background-color: rgb(75, 17, 90, 0.8);
+        color: whitesmoke;
+        transition: background-color 0.3s ease;
+        font-family: 'MedievalSharp', sans-serif;
+        margin-top: 2px;
+        margin-bottom: 0px;
+
+    }
+
+    .buttons button:hover {
+        background-color: #000000;
+    }
+
+    .note {
+        font-size: 0.6rem;
+        color: gray;
+        margin-top: -25px;
+        margin-bottom: 2px;
+        text-align: center;
+    }
+}
+
+.logo {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 2s ease;
+}
+
+.logo.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.buttons-container {
+    opacity: 0;
+    transform: translateX(50%);
+    transition: all 2s ease;
+}
+
+.buttons-container.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.section3 {
+    background-image: url('../assets/home3.png');
+    width: 100vw;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+
+
+    .carousel {
+
+        overflow: hidden;
+        height: 90%;
+        width: 100%;
+
+    }
+
+    .carousel img {
+        width: 60%;
+        height: auto;
+        object-fit: cover;
+
+    }
+}

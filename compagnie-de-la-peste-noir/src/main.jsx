@@ -2,17 +2,37 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./App"
-import Payment from "./pages/Payment";
+import PageAccueil from "./components/PageAccueil";
+
+import Navbar from "./components/Navbar";
+
+import Homes from "./Pages/Homes";
+
+import Contact from "./Pages/Contact";
+import Faq from "./Pages/Faq";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
-  },
-  {
-    path: "/Payment",
-    element: <Payment />,
+    element: <Navbar />,
+    children: [
+      {
+        path: "/",
+        element: <PageAccueil />,
+      },
+      {
+        path: "/",
+        element: <Homes />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
+      },
+      {
+        path: "faq",
+        element: <Faq />,
+      },
+    ],
   },
 ]);
 

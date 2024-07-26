@@ -2,17 +2,17 @@ import { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import "./InfoPopup.css";
-import dancingplague from "./imageinfo/TheDeathDance.jpeg";
+import abdou from "./imageinfo/abdou.jpg";
 
 function Info1() {
   const [isVisible, setIsVisible] = useState(false);
-  const danceplague = useRef();
+  const interview = useRef();
   const tl = useRef();
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 5500); // 1 minute
+    }, 67500); // 1 minute
 
     return () => {
       console.log("Cleanup");
@@ -24,30 +24,29 @@ function Info1() {
     if (isVisible) {
       tl.current = gsap
         .timeline()
-        .to(".info-container", {
-          x: -400,
-          duration: 10,
+        .to(".info-container4", {
+          y: -500,
+          duration: 8,
           delay: 0.5,
         })
-        .to(".info-container", {
-          x: 300,
+        .to(".info-container4", {
+          y: 600,
         });
     }
   }, [isVisible]);
 
   return (
-    <div ref={danceplague}>
+    <div ref={interview}>
       <div
         className={
-          isVisible ? "info-container visible" : "info-container hidden"
+          isVisible ? "info-container4 visible" : "info-container4 hidden"
         }
       >
-        <h2>Info flash!!! `La peste dancante`</h2>
-        <img src={dancingplague} alt="danse de la mort" />
+        <h2>Interview</h2>
+        <img src={abdou} alt="abdou" />
         <p>
-          Une épidemie sur Moisy-sur-Meth vient de survenir, plusieurs personnes
-          de la population danseraient jusqu`à en mourrir, surtout ne les
-          rejoingnez pas !.
+          Après Jeanne d'Arc qui entendait Dieu, ne loupez pas notre interview
+          de notre invité Abdou, celui qui entend les voix.
         </p>
       </div>
     </div>

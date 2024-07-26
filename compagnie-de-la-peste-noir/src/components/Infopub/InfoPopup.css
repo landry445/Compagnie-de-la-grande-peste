@@ -109,3 +109,42 @@ transition: opacity 0.5s ease-in-out;
   .info-container3.hidden {
     opacity: 0;
   }
+
+  .info-container4{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    right: 10%;
+    bottom: 0;
+    bottom: -300px;
+    width: 500px;
+    height: 400px;
+    z-index: 1000;
+    text-align: center;
+border: 2px black solid;
+border-radius: 15px;
+background-color: #a80f0f;
+color: whitesmoke;
+display: none;
+img{
+  height: 300px;
+}
+
+h2{
+    color: whitesmoke;
+}
+p{
+  font-size: 1rem;
+}
+transition: opacity 0.5s ease-in-out;
+}
+
+.info-container4.visible {
+    display: flex; 
+    opacity: 1;
+  }
+
+  .info-container4.hidden {
+    opacity: 0;
+  }

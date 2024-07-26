@@ -25,7 +25,7 @@ function Info2() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 6000); // 1 minute
+    }, 22500); // 1 minute
 
     const contentInterval = setInterval(() => {
       setPubContent((prevContent) => (prevContent + 1) % pubArray.length);

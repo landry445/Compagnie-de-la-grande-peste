@@ -1,11 +1,13 @@
 import { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { usePopup } from "./context/PopupContext";
 import "./InfoPopup.css";
 import diamand from "./imageinfo/poudre.jpeg";
 import knight from "./imageinfo/bellypain.jpeg";
 
 function Info3() {
+  const { hasSeenPopup3, setHasSeenPopup3 } = usePopup();
   const [isVisible, setIsVisible] = useState(false);
   const powder = useRef();
   const tl = useRef();
@@ -23,20 +25,29 @@ function Info3() {
   ];
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 49500); // 1 minute
+    if (!hasSeenPopup3) {
+      const timer = setTimeout(() => {
+        setIsVisible(true);
+        setHasSeenPopup3(true);
+      }, 49500); // 49.5 seconds
 
-    const contentInterval = setInterval(() => {
-      setPubContent((prevContent) => (prevContent + 1) % pubArray.length);
-    }, 4500); // 30 seconds
+      return () => {
+        console.log("Cleanup timer");
+        clearTimeout(timer); // Clean up timeout on component unmount
+      };
+    }
 
-    return () => {
-      console.log("Cleanup");
-      clearTimeout(timer); // Clean up timeout on component unmount
-      clearInterval(contentInterval);
-    };
-  }, [isVisible, pubArray.length]);
+    if (isVisible) {
+      const contentInterval = setInterval(() => {
+        setPubContent((prevContent) => (prevContent + 1) % pubArray.length);
+      }, 4500); // 4.5 seconds
+
+      return () => {
+        console.log("Cleanup content interval");
+        clearInterval(contentInterval);
+      };
+    }
+  }, [hasSeenPopup3, isVisible, pubArray.length, setHasSeenPopup3]);
 
   useGSAP(() => {
     if (isVisible) {

@@ -1,24 +1,29 @@
 import { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { usePopup } from "./context/PopupContext";
 import "./InfoPopup.css";
 import dancingplague from "./imageinfo/TheDeathDance.jpeg";
 
 function Info1() {
+  const { hasSeenPopup, setHasSeenPopup } = usePopup();
   const [isVisible, setIsVisible] = useState(false);
   const danceplague = useRef();
   const tl = useRef();
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 5500); // 1 minute
+    if (!hasSeenPopup) {
+      const timer = setTimeout(() => {
+        setIsVisible(true);
+        setHasSeenPopup(true);
+      }, 5500); // 1 minute
 
-    return () => {
-      console.log("Cleanup");
-      clearTimeout(timer); // Clean up timeout on component unmount
-    };
-  }, [isVisible]);
+      return () => {
+        console.log("Cleanup");
+        clearTimeout(timer); // Clean up timeout on component unmount
+      };
+    }
+  }, [hasSeenPopup, isVisible, setIsVisible, setHasSeenPopup]);
 
   useGSAP(() => {
     if (isVisible) {

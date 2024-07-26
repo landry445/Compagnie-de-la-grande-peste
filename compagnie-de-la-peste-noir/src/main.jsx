@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { PopupProvider } from "./components/Infopub/context/PopupContext";
 import Navbar from "./components/Navbar";
 
 import Homes from "./Pages/Homes";
@@ -31,6 +32,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <PopupProvider>
+      <RouterProvider router={router} />
+    </PopupProvider>
   </React.StrictMode>
 );

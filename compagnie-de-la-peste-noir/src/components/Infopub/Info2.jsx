@@ -1,11 +1,13 @@
 import { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { usePopup } from "./context/PopupContext";
 import "./InfoPopup.css";
 import toomuch from "./imageinfo/manykids.jpeg";
 import condom from "./imageinfo/capote.png";
 
 function Info2() {
+  const { hasSeenPopup2, setHasSeenPopup2 } = usePopup();
   const [isVisible, setIsVisible] = useState(false);
   const kids = useRef();
   const tl = useRef();
@@ -23,20 +25,29 @@ function Info2() {
   ];
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 22500); // 1 minute
+    if (!hasSeenPopup2) {
+      const timer = setTimeout(() => {
+        setIsVisible(true);
+        setHasSeenPopup2(true);
+      }, 22500); // 22.5 seconds
 
-    const contentInterval = setInterval(() => {
-      setPubContent((prevContent) => (prevContent + 1) % pubArray.length);
-    }, 4000); // 30 seconds
+      return () => {
+        console.log("Cleanup timer");
+        clearTimeout(timer); // Clean up timeout on component unmount
+      };
+    }
 
-    return () => {
-      console.log("Cleanup");
-      clearTimeout(timer); // Clean up timeout on component unmount
-      clearInterval(contentInterval);
-    };
-  }, [isVisible, pubArray.length]);
+    if (isVisible) {
+      const contentInterval = setInterval(() => {
+        setPubContent((prevContent) => (prevContent + 1) % pubArray.length);
+      }, 4000); // 4 seconds
+
+      return () => {
+        console.log("Cleanup content interval");
+        clearInterval(contentInterval);
+      };
+    }
+  }, [hasSeenPopup2, isVisible, pubArray.length, setHasSeenPopup2]);
 
   useGSAP(() => {
     if (isVisible) {

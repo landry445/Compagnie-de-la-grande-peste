@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import menu from "../assets/images/menu-burger.png";
 import "../style/Navbar.css";
@@ -8,6 +9,13 @@ import Info3 from "./Infopub/Info3";
 import Info4 from "./Infopub/Info4";
 
 function Navbar() {
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => (event) => {
+    event.preventDefault();
+    navigate(path);
+  };
+
   const [showMenu, setShowMenu] = useState(false);
   const modalRef = useRef(null);
   const menuButtonRef = useRef(null);
@@ -59,10 +67,18 @@ function Navbar() {
       {showMenu && (
         <div className="top-modal" ref={modalRef}>
           <div className="container-buttons-left">
-            <div className="mon-espace-nav-button" type="button">
+            <div
+              className="mon-espace-nav-button"
+              type="button"
+              onClick={handleNavigation("faq")}
+            >
               <p className="hover-text">Mon Espace</p>
             </div>
-            <div className="home-button" type="button">
+            <div
+              className="home-button"
+              type="button"
+              onClick={handleNavigation("/")}
+            >
               <p className="hover-text">Page d`accueil</p>
             </div>
           </div>
@@ -71,7 +87,11 @@ function Navbar() {
             <div className="mon-payment-button" type="button">
               <p className="hover-text">Mes payments</p>
             </div>
-            <div className="contact-button-nav" type="button">
+            <div
+              className="contact-button-nav"
+              type="button"
+              onClick={handleNavigation("contact")}
+            >
               <p className="hover-text">Contact</p>
             </div>
           </div>

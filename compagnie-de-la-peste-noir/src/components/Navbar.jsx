@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import menu from "../assets/images/menu-burger.png";
 import "../style/Navbar.css";
 import Info1 from "./Infopub/Info1";
+import Info2 from "./Infopub/Info2";
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -39,6 +40,7 @@ function Navbar() {
     <nav>
       <Outlet />
       <Info1 />
+      <Info2 />
       <div className="bar-navigation">
         <img
           src={menu}

@@ -1,0 +1,106 @@
+body {
+  font-family: var(--font);
+  background-image: url("../assets/backgroundpayment.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: lighten;
+  position: relative;
+
+  .logo {
+    display: flex;
+    height: 200px;
+  }
+  p {
+    font-weight: bold;
+  }
+}
+.calcRed {
+  display: flex;
+}
+.boiteRedevance {
+  display: flex;
+  /* border: 5px solid black; */
+}
+.boiteRedevance1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  border: 5px solid black;
+  padding: 10px;
+  margin: 10px;
+  margin-right: 10%;
+  flex-direction: column;
+  align-items: stretch;
+}
+.presta1 {
+  padding-top: 0.2rem;
+  margin-bottom: 3em;
+}
+.boiteRedevance2 {
+  display: flex;
+  justify-content: space-around;
+  border: 5px solid black;
+  padding: 10px;
+  margin: 10px;
+  width: 60%;
+  min-height: 25em;
+}
+.coutDroitEntre {
+  padding-top: 0.2rem;
+  margin-bottom: 4.8em;
+}
+.montantDevise1 {
+  border: 4px solid black;
+  width: 50px;
+  margin-bottom: 2em;
+}
+.montantDevise2 {
+  border: 4px solid black;
+}
+
+.modeRetrib {
+  display: flex;
+}
+
+.boiteRetrib {
+  display: flex;
+  /* border: 5px solid black; */
+}
+.boiteRetribu1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  border: 5px solid black;
+  padding: 10px;
+  margin: 10px;
+  margin-right: 10%;
+  min-width: 6rem;
+  flex-direction: column;
+  align-items: stretch;
+}
+.total {
+  border: 5px solid black;
+}
+.boiteRetribu2 {
+  display: flex;
+  border: 5px solid black;
+  padding: 10px;
+  margin: 10px;
+  width: 60%;
+  min-height: 10em;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+  align-items: flex-start;
+}
+
+.test {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  min-width: 47.5rem;
+}
